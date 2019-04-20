@@ -6,6 +6,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="cookieTitleColor">@color/colorPrimary</item>
+        <item name="cookieMessageColor">@color/default_message_color</item>
+        <item name="cookieActionColor">@color/default_action_color</item>
+        <item name="cookieBackgroundColor">@color/default_title_color</item>
     </style>
 
 </resources>
