@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#93B843</color>
     <color name="colorPrimaryDark">#93B843</color>
+    <color name="darker_coloured_green">#33691E</color>
     <color name="backgroundColor">#fcfcfc</color>
     <color name="gray">#B5B5B5</color>
     <color name="deepPurple">#7c4dff</color>
