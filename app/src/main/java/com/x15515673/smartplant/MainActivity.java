@@ -13,6 +13,7 @@ import org.aviran.cookiebar2.CookieBar;
 
 /**
  * x15515673 - Jordan May
+ * IoT Application Development Project
  */
 public class MainActivity extends AppCompatActivity
 {

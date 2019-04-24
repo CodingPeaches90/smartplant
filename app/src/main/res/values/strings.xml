@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SmartPlant</string>
+    <string name="activity_name_pump">Control your pump!</string>
+    <string-array name="times">
+        <item>2s</item>
+        <item>4s</item>
+        <item>6s</item>
+    </string-array>
 </resources>
