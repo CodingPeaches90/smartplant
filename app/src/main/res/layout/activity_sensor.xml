@@ -13,15 +13,141 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/darker_coloured_green">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/offwhite">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/darker_coloured_green"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="Temperature"
+                    />
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:background="@color/offwhite"
+                    android:textColor="@color/darker_coloured_green"
+                    android:textSize="22dp"
+                    android:text="ON"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/offwhite">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/darker_coloured_green"
+                >
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="Humidity"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:background="@color/offwhite"
+                    android:textSize="22dp"
+                    android:textColor="@color/darker_coloured_green"
+                    android:text="ON"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/offwhite">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/darker_coloured_green"
+                >
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="Soil"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_gravity="center"
+                    android:background="@color/offwhite"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/darker_coloured_green"
+                    android:text="ON"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/darker_coloured_green">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
 
         </LinearLayout>
 

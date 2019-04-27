@@ -105,7 +105,7 @@
                     app:checkedTextColor="@android:color/white"
                     app:uncheckedBackgroundColor="@color/colorPrimaryDark"
                     app:uncheckedTextColor="@color/offwhite"
-                    app:separatorColor="@color/green"/>
+                    app:separatorColor="@color/offwhite"/>
 
             </LinearLayout>
 
