@@ -44,6 +44,9 @@ public class SensorActivity extends AppCompatActivity {
         humidityState = findViewById(R.id.humidityStateVal);
         soilState = findViewById(R.id.soilStateVal);
 
+        // Set positions that were saved
+
+
         // Set our toggles
         temperatureToggle = findViewById(R.id.temperatureToggle);
         humidityToggle = findViewById(R.id.humidityToggle);
@@ -56,8 +59,12 @@ public class SensorActivity extends AppCompatActivity {
                 if (temperatureToggle.isChecked()){
                     // if checked
                     Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    temperatureState.setText("ON");
                 }else{
                     Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    temperatureState.setText("OFF");
                 }
             }
         });
@@ -67,8 +74,12 @@ public class SensorActivity extends AppCompatActivity {
                 if (humidityToggle.isChecked()){
                     // if checked
                     Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    humidityState.setText("ON");
                 }else{
                     Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    humidityState.setText("OFF");
                 }
             }
         });
@@ -78,8 +89,12 @@ public class SensorActivity extends AppCompatActivity {
                 if (soilToggle.isChecked()){
                     // if checked
                     Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    soilState.setText("ON");
                 }else{
                     Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                    // Check the text view
+                    soilState.setText("OFF");
                 }
             }
         });
