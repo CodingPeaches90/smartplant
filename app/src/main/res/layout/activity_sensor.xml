@@ -37,6 +37,7 @@
                     android:text="Temperature"
                     />
                 <TextView
+                    android:id="@+id/temperatureValues"
                     android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -45,7 +46,8 @@
                     android:textColor="@color/offwhite"
                     android:text="0"/>
                 <TextView
-                    android:layout_width="140dp"
+                    android:id="@+id/temperatureStateVal"
+                    android:layout_width="90dp"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
@@ -76,6 +78,7 @@
                     android:textColor="@color/offwhite"
                     android:text="Humidity"/>
                 <TextView
+                    android:id="@+id/humidityValues"
                     android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -84,7 +87,8 @@
                     android:textColor="@color/offwhite"
                     android:text="0"/>
                 <TextView
-                    android:layout_width="140dp"
+                    android:layout_width="90dp"
+                    android:id="@+id/humidityStateVal"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
@@ -115,6 +119,7 @@
                     android:textColor="@color/offwhite"
                     android:text="Soil"/>
                 <TextView
+                    android:id="@+id/soilValues"
                     android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -123,7 +128,8 @@
                     android:textColor="@color/offwhite"
                     android:text="0"/>
                 <TextView
-                    android:layout_width="140dp"
+                    android:id="@+id/soilStateVal"
+                    android:layout_width="90dp"
                     android:layout_gravity="center"
                     android:background="@color/offwhite"
                     android:gravity="center"
@@ -145,27 +151,47 @@
                 android:layout_height="match_parent"
                 android:background="@color/offwhite"
                 android:orientation="vertical"
-                android:padding="70dp">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:padding="10dp"
-                    android:text="Enter a rate"
-                    android:layout_marginBottom="20dp"/>
-
+                android:padding="15dp">
                 <TextView
                     android:layout_width="match_parent"
-
                     android:layout_height="30dp"
                     android:textColor="@color/darker_coloured_green"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
-                    android:text="Temperature/Humidity"/>
+                    android:text="Enter a rate"/>
+
+                <EditText
+                    android:id="@+id/rateLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/darker_coloured_green"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Temperature"/>
                 <ToggleButton
+                    android:id="@+id/temperatureToggle"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/darker_coloured_green"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Humidity"/>
+                <ToggleButton
+                    android:id="@+id/humidityToggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -175,6 +201,7 @@
                     android:gravity="center"
                     android:text="Soil Sensor"/>
                 <ToggleButton
+                    android:id="@+id/soilToggle"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     />

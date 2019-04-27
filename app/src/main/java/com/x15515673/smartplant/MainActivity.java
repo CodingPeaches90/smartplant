@@ -37,14 +37,6 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setCustomView(R.layout.action_bar_custom);
 
 
-
-        // On Create show a welcome message
-        CookieBar.build(MainActivity.this)
-                .setTitle("Welcome Back")
-                .setAnimationIn(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
-                .setAnimationOut(android.R.anim.slide_out_right, android.R.anim.slide_out_right)
-                .show();
-
         pump_card = findViewById(R.id.water_pump_card);
         sensors_card = findViewById(R.id.sensors_card);
         lcd_card = findViewById(R.id.lcd_card);
