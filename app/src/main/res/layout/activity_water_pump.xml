@@ -43,14 +43,17 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:layout_margin="10dp"
                     android:text="I last watered the plants"/>
-                <TextView
-                    android:id="@+id/last_watered_plants"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:layout_margin="1dp"
-                    android:text="I last watered the plants"/>
+                <com.github.curioustechizen.ago.RelativeTimeTextView
+                    android:id="@+id/last_watered"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/cardview_dark_background"
+                    />
+
 
             </LinearLayout>
 

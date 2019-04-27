@@ -2,8 +2,8 @@
     <string name="app_name">SmartPlant</string>
     <string name="activity_name_pump">Control your pump!</string>
     <string-array name="times">
-        <item>2s</item>
-        <item>4s</item>
-        <item>6s</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
     </string-array>
 </resources>
