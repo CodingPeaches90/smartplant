@@ -2,8 +2,10 @@ package com.x15515673.smartplant;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class SensorActivity extends AppCompatActivity {
@@ -46,6 +48,41 @@ public class SensorActivity extends AppCompatActivity {
         temperatureToggle = findViewById(R.id.temperatureToggle);
         humidityToggle = findViewById(R.id.humidityToggle);
         soilToggle = findViewById(R.id.soilToggle);
+
+        // Set our listeners
+        temperatureToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (temperatureToggle.isChecked()){
+                    // if checked
+                    Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        humidityToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (humidityToggle.isChecked()){
+                    // if checked
+                    Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        soilToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (soilToggle.isChecked()){
+                    // if checked
+                    Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 }
