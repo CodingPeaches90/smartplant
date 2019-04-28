@@ -4,6 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LCDActivity">
+    tools:context=".LCDActivity"
+    android:background="@color/darker_coloured_green">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="180dp"
+        android:fontFamily="@font/montserrat_bold"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="73dp"
+        android:text="Display Last Watered"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:fontFamily="@font/montserrat_bold"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="254dp"
+        android:text="Display Current Temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </android.support.constraint.ConstraintLayout>
