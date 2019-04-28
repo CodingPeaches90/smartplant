@@ -79,7 +79,7 @@ public class SensorActivity extends AppCompatActivity {
 
         // Set positions that were saved in firebase
         // set the temperature
-        databaseReference.child("Temperature").child("Information").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("Temperature").child("Information").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
@@ -95,8 +95,7 @@ public class SensorActivity extends AppCompatActivity {
                     temperatureToggle.setChecked(false);
                     temperatureState.setText("OFF");
                 }
-                temperatureValue.setText("34");
-
+                temperatureValue.setText(previous_value);
             }
 
             @Override
@@ -105,7 +104,7 @@ public class SensorActivity extends AppCompatActivity {
             }
         });
         // set the HUMIDITY
-        databaseReference.child("Humidity").child("Information").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("Humidity").child("Information").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
@@ -121,7 +120,7 @@ public class SensorActivity extends AppCompatActivity {
                     humidityToggle.setChecked(false);
                     humidityState.setText("OFF");
                 }
-                humidityValue.setText("34");
+                humidityValue.setText(previous_value);
 
             }
 
@@ -131,7 +130,7 @@ public class SensorActivity extends AppCompatActivity {
             }
         });
         // set the light
-        databaseReference.child("Light").child("Information").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("Light").child("Information").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
@@ -147,7 +146,7 @@ public class SensorActivity extends AppCompatActivity {
                     lightToggle.setChecked(false);
                     lightState.setText("OFF");
                 }
-                lightValue.setText("34");
+                lightValue.setText(previous_value);
 
             }
 
@@ -157,7 +156,7 @@ public class SensorActivity extends AppCompatActivity {
             }
         });
         // set the soil
-        databaseReference.child("Soil").child("Information").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("Soil").child("Information").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
@@ -173,7 +172,7 @@ public class SensorActivity extends AppCompatActivity {
                     soilToggle.setChecked(false);
                     soilState.setText("OFF");
                 }
-                soilValue.setText("34");
+                soilValue.setText(previous_value);
 
             }
 
@@ -209,8 +208,7 @@ public class SensorActivity extends AppCompatActivity {
                     // Post to Firebase
                     final String limit = rateLimit.getText().toString();
 
-                    Payload payload = new Payload("ON", limit, "", date);
-                    databaseReference.child("Temperature").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Temperature").child("Information").child("state").setValue("ON").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -229,8 +227,7 @@ public class SensorActivity extends AppCompatActivity {
                     // Post to Firebase
                     final String limit = rateLimit.getText().toString();
 
-                    Payload payload = new Payload("OFF", ratelimit_sensor, "", date);
-                    databaseReference.child("Temperature").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Temperature").child("Information").child("state").setValue("OFF").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -268,8 +265,7 @@ public class SensorActivity extends AppCompatActivity {
                     final String limit = rateLimit.getText().toString();
                     // Toggle in Firebase
 
-                    Payload payload = new Payload("ON", ratelimit_sensor, "", date);
-                    databaseReference.child("Humidity").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Humidity").child("Information").child("state").setValue("ON").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -288,8 +284,7 @@ public class SensorActivity extends AppCompatActivity {
                     final String limit = rateLimit.getText().toString();
 
                     // Firebase
-                    Payload payload = new Payload("OFF", ratelimit_sensor, "", date);
-                    databaseReference.child("Humidity").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Humidity").child("Information").child("state").setValue("OFF").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -303,6 +298,7 @@ public class SensorActivity extends AppCompatActivity {
                 }
             }
         });
+
         soilToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -328,8 +324,7 @@ public class SensorActivity extends AppCompatActivity {
 
                     // Soil Firebase
 
-                    Payload payload = new Payload("ON", ratelimit_sensor, "", date);
-                    databaseReference.child("Soil").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Soil").child("Information").child("state").setValue("ON").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -348,8 +343,7 @@ public class SensorActivity extends AppCompatActivity {
                     final String limit = rateLimit.getText().toString();
 
                     // Firebase
-                    Payload payload = new Payload("OFF", ratelimit_sensor, "", date);
-                    databaseReference.child("Soil").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Soil").child("Information").child("state").setValue("OFF").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -385,8 +379,7 @@ public class SensorActivity extends AppCompatActivity {
 
                     // Firebase
 
-                    Payload payload = new Payload("ON", ratelimit_sensor, "", date);
-                    databaseReference.child("Light").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Light").child("Information").child("state").setValue("ON").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -404,8 +397,7 @@ public class SensorActivity extends AppCompatActivity {
                     final String limit = rateLimit.getText().toString();
 
                     // Firebase
-                    Payload payload = new Payload("OFF", ratelimit_sensor, "", date);
-                    databaseReference.child("Light").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Light").child("Information").child("state").setValue("OFF").addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
