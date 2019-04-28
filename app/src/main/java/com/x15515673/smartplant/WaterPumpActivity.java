@@ -88,29 +88,29 @@ public class WaterPumpActivity extends AppCompatActivity {
                 String[] operators = getResources().getStringArray(R.array.times);
                 int position = possec[0];
                 int whichRate = Integer.parseInt(operators[position]);
-                int tempRate = 0;
+                String tempRate = "0";
 
                 if (whichRate == 2)
                 {
-                    tempRate = 2;
+                    tempRate = "2";
                     Toast.makeText(WaterPumpActivity.this, ""+tempRate, Toast.LENGTH_SHORT).show();
 
                 }else if (whichRate == 4)
                 {
-                    tempRate = 4;
+                    tempRate = "4";
                     Toast.makeText(WaterPumpActivity.this, ""+tempRate, Toast.LENGTH_SHORT).show();
 
 
                 }else if (whichRate == 6)
                 {
-                    tempRate = 6;
+                    tempRate = "6";
                     Toast.makeText(WaterPumpActivity.this, ""+tempRate, Toast.LENGTH_SHORT).show();
                 }
 
                 long date = new Date().getTime();
                 Payload payload = new Payload("on", tempRate, "non", date);
                 // when the user clicks this, grab the seconds the user wants and post to on
-                final int finalTempRate = tempRate;
+                final String finalTempRate = tempRate;
                 databaseReference.child("Pump").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)

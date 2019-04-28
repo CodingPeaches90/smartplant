@@ -8,12 +8,12 @@ import java.util.Date;
 public class Payload
 {
     private String state;
-    private int rateLimit;
+    private String rateLimit;
     private String message;
     private long date;
 
 
-    public Payload(String state, int rateLimit, String message, long date)
+    public Payload(String state, String rateLimit, String message, long date)
     {
         this.state = state;
         this.rateLimit = rateLimit;
@@ -37,11 +37,11 @@ public class Payload
         this.state = state;
     }
 
-    public int getRateLimit() {
+    public String getRateLimit() {
         return rateLimit;
     }
 
-    public void setRateLimit(int rateLimit) {
+    public void setRateLimit(String rateLimit) {
         this.rateLimit = rateLimit;
     }
 
