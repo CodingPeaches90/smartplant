@@ -15,15 +15,18 @@ public class SensorActivity extends AppCompatActivity {
     private ToggleButton temperatureToggle;
     private ToggleButton humidityToggle;
     private ToggleButton soilToggle;
+    private ToggleButton lightToggle;
 
     // Sensor information textviews
     private TextView temperatureValue;
     private TextView humidityValue;
     private TextView soilValue;
+    private TextView lightValue;
 
     private TextView temperatureState;
     private TextView humidityState;
     private TextView soilState;
+    private TextView lightState;
 
     // Limiting rate
     private EditText rateLimit;
@@ -38,19 +41,23 @@ public class SensorActivity extends AppCompatActivity {
         temperatureValue = findViewById(R.id.temperatureValues);
         humidityValue = findViewById(R.id.humidityValues);
         soilValue = findViewById(R.id.soilValues);
+        lightValue = findViewById(R.id.lightValues);
 
         // Set our state
         temperatureState = findViewById(R.id.temperatureStateVal);
         humidityState = findViewById(R.id.humidityStateVal);
-        soilState = findViewById(R.id.soilStateVal);
+        soilState = findViewById(R.id.soilStateValues);
+        lightState = findViewById(R.id.lightStateVal);
 
         // Set positions that were saved
+
 
 
         // Set our toggles
         temperatureToggle = findViewById(R.id.temperatureToggle);
         humidityToggle = findViewById(R.id.humidityToggle);
         soilToggle = findViewById(R.id.soilToggle);
+        lightToggle = findViewById(R.id.lightToggle);
 
         // Set our listeners
         temperatureToggle.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +102,18 @@ public class SensorActivity extends AppCompatActivity {
                     Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
                     // Check the text view
                     soilState.setText("OFF");
+                }
+            }
+        });
+        lightToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (lightToggle.isChecked()){
+                    Toast.makeText(SensorActivity.this, "ON", Toast.LENGTH_SHORT).show();
+                    lightState.setText("ON");
+                }else{
+                    Toast.makeText(SensorActivity.this, "OFF", Toast.LENGTH_SHORT).show();
+                    lightState.setText("OFF");
                 }
             }
         });

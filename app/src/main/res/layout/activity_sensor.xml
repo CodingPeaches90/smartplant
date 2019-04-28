@@ -23,7 +23,7 @@
             </View>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:background="@color/darker_coloured_green"
                 android:orientation="horizontal">
 
@@ -57,17 +57,11 @@
                     android:text="ON"/>
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/offwhite">
-
-            </View>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:background="@color/darker_coloured_green"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="140dp"
@@ -76,7 +70,8 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:textSize="16dp"
                     android:textColor="@color/offwhite"
-                    android:text="Humidity"/>
+                    android:text="Humidity"
+                    />
                 <TextView
                     android:id="@+id/humidityValues"
                     android:layout_width="140dp"
@@ -87,14 +82,14 @@
                     android:textColor="@color/offwhite"
                     android:text="0"/>
                 <TextView
-                    android:layout_width="90dp"
                     android:id="@+id/humidityStateVal"
+                    android:layout_width="90dp"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
                     android:background="@color/offwhite"
-                    android:textSize="22dp"
                     android:textColor="@color/darker_coloured_green"
+                    android:textSize="22dp"
                     android:text="ON"/>
 
             </LinearLayout>
@@ -106,7 +101,7 @@
             </View>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:background="@color/darker_coloured_green"
                 >
 
@@ -128,7 +123,48 @@
                     android:textColor="@color/offwhite"
                     android:text="0"/>
                 <TextView
-                    android:id="@+id/soilStateVal"
+                    android:layout_width="90dp"
+                    android:id="@+id/soilStateValues"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:background="@color/offwhite"
+                    android:textSize="22dp"
+                    android:textColor="@color/darker_coloured_green"
+                    android:text="ON"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/offwhite">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/darker_coloured_green"
+                >
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="Light"/>
+                <TextView
+                    android:id="@+id/lightValues"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/offwhite"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/lightStateVal"
                     android:layout_width="90dp"
                     android:layout_gravity="center"
                     android:background="@color/offwhite"
@@ -142,7 +178,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="1dp"
                 android:background="@color/darker_coloured_green">
 
             </View>
@@ -151,7 +187,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/offwhite"
                 android:orientation="vertical"
-                android:padding="15dp">
+                android:padding="3dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -164,9 +200,9 @@
                     android:id="@+id/rateLimit"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:padding="10dp"
+                    android:padding="3dp"
                     android:text="0"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="2dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -179,7 +215,7 @@
                     android:id="@+id/temperatureToggle"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="2dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -205,11 +241,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/darker_coloured_green"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Light Sensor"/>
+                <ToggleButton
+                    android:id="@+id/lightToggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    />
 
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 
