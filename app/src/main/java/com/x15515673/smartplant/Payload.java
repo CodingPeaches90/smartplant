@@ -1,9 +1,10 @@
 package com.x15515673.smartplant;
 
-import java.util.Date;
 
 /**
- * Class that sends information to Firebase from our sensors
+ * Author : Jordan May x15515673
+ *
+ * Class that sends information to Firebase from our sensors in the form of an Object
  */
 public class Payload
 {

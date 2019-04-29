@@ -20,6 +20,12 @@ import com.llollox.androidtoggleswitch.widgets.ToggleSwitch;
 import java.util.Date;
 import java.util.Map;
 
+/**
+ * Author : Jordan May x15515673
+ *
+ * This class contains the code for the Water Pump activity in which it triggers the Pump Attached
+ * to the Pi.
+ */
 public class WaterPumpActivity extends AppCompatActivity {
 
     // Declare Variables
@@ -86,10 +92,12 @@ public class WaterPumpActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 String[] operators = getResources().getStringArray(R.array.times);
+                // we set the current position to the array of size one (This is a work around)
                 int position = possec[0];
                 int whichRate = Integer.parseInt(operators[position]);
+                // Set rate to 0 for now
                 String tempRate = "0";
-
+                // multiple if's to check and assign the rate
                 if (whichRate == 2)
                 {
                     tempRate = "2";
@@ -109,7 +117,7 @@ public class WaterPumpActivity extends AppCompatActivity {
 
                 long date = new Date().getTime();
                 Payload payload = new Payload("on", tempRate, "non", date);
-                // when the user clicks this, grab the seconds the user wants and post to on
+                // when the user clicks this, grab the seconds the user wants and post to firebase as a object type Payload
                 final String finalTempRate = tempRate;
                 databaseReference.child("Pump").child("Information").setValue(payload).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

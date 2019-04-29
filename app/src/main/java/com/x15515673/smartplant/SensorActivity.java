@@ -20,6 +20,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Date;
 import java.util.Map;
 
+/**
+ * Author : Jordan May x15515673
+ * This class contains the code for the sensors in which it will communicate with the Raspberry Pi
+ * through Firebase (Biodirectional communication).
+ */
+
 public class SensorActivity extends AppCompatActivity {
 
     // Variables

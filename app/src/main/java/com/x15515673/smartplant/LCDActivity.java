@@ -12,10 +12,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.Date;
+
+/**
+ * Author : Jordan May x15515673
+ *
+ * This class contains the codd for the LCD Activity alongside the code needed
+ * for communicating with Firebase.
+ */
 
 public class LCDActivity extends AppCompatActivity {
-
+    // Set up our Variables
     private Button button_last_watered;
     private Button button_current_temperature;
     private DatabaseReference databaseReference;
@@ -29,10 +35,11 @@ public class LCDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("LCD Functions");
         setContentView(R.layout.activity_lcd);
-
+        // Assign our Variables
         button_last_watered = findViewById(R.id.button);
         button_current_temperature = findViewById(R.id.button2);
 
+        // firebase
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
